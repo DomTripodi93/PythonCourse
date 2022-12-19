@@ -1,0 +1,9 @@
+Hello!
+
+In the next lecture we will be talking about the __init__ method and setting a couple of values for our class from the __init__ method.
+
+Your assignment is to implement an __init__ method on your "Furniture" class that will set the price attribute and create two instances of the class with different prices.
+
+
+See you in the next lecture!
+Dominic

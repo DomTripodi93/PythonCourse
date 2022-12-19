@@ -1,0 +1,13 @@
+Hello!
+
+In the next lectures we will be talking about the decorators.
+
+Your assignment is in 4 parts:
+1. Update your capitalize_words_create function to take in and call a callback fuction.
+2. pass result_string to the callback function.
+3. Create a function, show_result, that takes in a single argument and prints the argument after the string "Here is the result: ".
+4. Decorate your new show_result function with capitalize_words_create.
+
+
+See you in the next lecture!
+Dominic

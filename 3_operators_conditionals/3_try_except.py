@@ -16,7 +16,10 @@
 # my_conditional_result = "test" == "test"
 # my_conditional_result = "test" == "Test"
 # my_conditional_result = "test" != "Test"
-my_conditional_result = "teSt".lower() == "TEsT".lower()
-# my_conditional_result = "teSt".lower() > 7
-print("\nConditional statement result")
-print(my_conditional_result)
+# my_conditional_result = "teSt".lower() == "TEsT".lower()
+try:
+    my_conditional_result = "teSt".lower() > 7
+    print("\nConditional statement result")
+    print(my_conditional_result)
+except:
+    print("The items are not comparable")

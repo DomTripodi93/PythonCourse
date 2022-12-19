@@ -1,0 +1,15 @@
+Hello!
+
+In the next lecture we will be talking about multiple inheritance with more than 1 parent class.
+
+
+Your assignment is in 5 parts:
+1. Convert the "Furniture" constructor to use **kwargs
+2. Add a new for_office attribute to the "Furniture" class and it's constructor
+3. Create a new "OfficeFurniture" class that inherits from "Furniture" and sets for_office to True by default
+4. Create a new "OfficeChair" class that inherits from "Chair" and "OfficeFurniture"
+5. Make sure that "OfficeChair" only requires price, and uses the constructors from "Chair" and "OfficeFurniture" to set the can_sit and for_office attributes
+
+
+See you in the next lecture!
+Dominic

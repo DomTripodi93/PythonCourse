@@ -1,0 +1,13 @@
+Hello!
+
+In the next lecture we will be talking about super and accessing logic from a parent class that is overridden.
+
+
+Your assignment is in 4 parts:
+1. Add a can_sit attribute to the "Furniture" class
+2. Set can_sit from the "Furniture" constructor, but not the "Chair" constructor
+3. Call the "Furniture" class's __init__ method from the "Chair" class, passing True for can_sit.
+4. (bonus) Create a new price comparison method with updated output text
+
+See you in the next lecture!
+Dominic

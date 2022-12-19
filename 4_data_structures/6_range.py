@@ -1,7 +1,4 @@
 
-
-
-
 my_first_range = range(5)
 
 print("My first range with from the input of 5")

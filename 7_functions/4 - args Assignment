@@ -1,0 +1,9 @@
+Hello!
+
+In the next lecture we will be talking about the the *args argument in a function.
+
+Your assignment is to update the capitalize_words function to use the first element in the *args argument instead of a named argument.
+
+
+See you in the next lecture!
+Dominic

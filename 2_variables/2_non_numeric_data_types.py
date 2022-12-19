@@ -1,12 +1,14 @@
 import datetime
 
 my_first_string = "hello world"
+my_first_string = "hello" + \
+    " world"
 
 print("Type of text")
 print(type(my_first_string))
 
 
-my_first_date = datetime.datetime(2022, 12, 20)
+my_first_date = datetime.datetime(2023, 5, 20)
 
 print("\nType of date")
 print(type(my_first_date))
