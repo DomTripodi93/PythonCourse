@@ -24,6 +24,11 @@ print("\nType of true/false")
 print(type(my_first_boolean))
 
 
+my_first_none_type = None
+print("\nType of None")
+print(type(my_first_none_type))
+
+
 
 
 first_assigned, second_assigned = 5, 10

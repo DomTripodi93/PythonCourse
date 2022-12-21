@@ -25,7 +25,19 @@ print(
     "\nA slice from the 2nd element up to but not including the 6th element: my_second_list[1:5]")
 print(my_second_list[1:5])
 
+list_equal = my_second_list
+print("\nmy_second_list and list_equal before setting the third item to the value 15")
+my_second_list[2] = 15
+print(list_equal)
+print(my_second_list)
+
+print("\nmy_second_list and list_equal after setting the third item to the value 15")
+print(list_equal)
+print(my_second_list)
+
+
 list_clone = [*my_second_list]
+my_second_list[2] = 12
 
 print("\nVariadic / splat / spread clone of my_second_list: [*my_second_list]")
 combined_list = [*list_clone, *my_second_list]
@@ -33,3 +45,5 @@ combined_list = [*list_clone, *my_second_list]
 print(
     "\nVariadic combination of list_clone and my_second_list: [*list_clone, *my_second_list]")
 print(combined_list)
+print(list_equal)
+print(my_second_list)
