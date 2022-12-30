@@ -1,27 +1,18 @@
 
 class MyFirstClass:
-    # class_attribute = 7
-    def __init__(self):
-        # class_attribute = 5
-        self.class_attribute = 5
-        print("constructor called")
+    def __init__(self, **kwargs):
+        self.my_class_attribute = kwargs["my_class_attribute"]
+        print("My first class is initialized")
+        print(self.my_class_attribute)
 
 
-my_class_instance = MyFirstClass()
+my_first_class_instance = MyFirstClass(my_class_attribute=10)
+my_second_class_instance = MyFirstClass(my_class_attribute=5)
 
-print("\nA view of class_attribute on my_class_instance instance of MyFirstClass")
-print(my_class_instance.class_attribute)
+my_first_class_instance.my_class_attribute += 7
 
+print("my_class_attribute on my_first_class_instance")
+print(my_first_class_instance.my_class_attribute)
 
-class MyConstructableClass:
-    def __init__(self, numeric_attribute, string_attribute):
-        self.numeric_attribute = numeric_attribute
-        self.string_attribute = string_attribute
-
-
-my_class_instance = MyConstructableClass(6, "words")
-
-print("\nA view of numeric_attribute and string_attribute on my_class_instance " +
-      "instance of MyConstructableClass")
-print(my_class_instance.numeric_attribute)
-print(my_class_instance.string_attribute)
+print("\nmy_class_attribute on my_second_class_instance")
+print(my_second_class_instance.my_class_attribute)

@@ -1,16 +1,15 @@
 import json
 
-json_file = open("random_names.json")
 
-json_test_string = json_file.read()
+json_file = open("randomNames.json", "r")
 
-json_result = json.loads(json_test_string)
+json_string = json_file.read()
+output_list = json.loads(json_string)
 
-first_name_analysis = {}
 last_name_analysis = {}
+first_name_analysis = {}
 
-for name in json_result:
-    # print(name)
+for name in output_list:
     if name["first_name"] in first_name_analysis.keys():
         first_name_analysis[name["first_name"]] += 1
     else:
@@ -21,5 +20,5 @@ for name in json_result:
     else:
         last_name_analysis[name["last_name"]] = 1
 
-print(first_name_analysis)
 print(last_name_analysis)
+print(first_name_analysis)

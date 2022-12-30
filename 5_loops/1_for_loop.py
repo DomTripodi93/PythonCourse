@@ -1,65 +1,57 @@
-import datetime
 
-range_to_loop = range(5)
+my_number_list = [
+    3,
+    4,
+    7,
+    2,
+    15
+]
 
-list_to_add_to = []
+print("My whole list")
+print(my_number_list)
 
-# for index in range_to_loop:
-for index in range(5):
-    # print(index)
-    list_to_add_to.append(index)
+my_square_list = []
 
+for number in my_number_list:
+    # print(number)
+    my_square_list.append(number ** 2)
 
-print("Our resulting list")
-print(list_to_add_to)
-
-list_to_loop = [17, "moon", datetime.datetime(2023, 6, 7)]
-
-
-list_to_add_to = []
-
-for index in range(3):
-    list_to_add_to.append(list_to_loop[index])
-
-print("\nOur list of items pulled by index")
-print(list_to_add_to)
+print("\nMy square list")
+print(my_square_list)
 
 
-list_to_add_to = []
-for value in list_to_loop:
-    list_to_add_to.append(value)
+my_filtered_list = []
 
-print("\nOur list of items pulled by value")
-print(list_to_add_to)
+my_filtered_list_simplified = {
+    number for number in my_number_list if (number > 5)}
+my_filtered_list_simplified = (
+    number for number in my_number_list if (number > 5))
+my_filtered_list_simplified = [
+    number for number in my_number_list if (number > 5)]
 
-
-list_of_numbers = [2, 3, 3, 5, 1, 2, 4, 3, 2, 9, 8]
-
-filtered_list = []
-
-for number in list_of_numbers:
-    if number > 4:
-        filtered_list.append(number)
-
-print("\nOur filtered list")
-print(filtered_list)
+for number in my_number_list:
+    if (number > 5):
+        my_filtered_list.append(number)
 
 
-filtered_list_simplified = [number for number in list_of_numbers if number > 4]
+print("\nMy filtered list")
+print(my_filtered_list)
+print(my_filtered_list_simplified)
 
-print("\nOur filtered list simplified")
-print(filtered_list)
 
+my_original_string = "this is some random sentence"
 
-string_to_split = "some,words,separated,by,commas"
-list_from_split = string_to_split.split(",")
-reconstructed_string = ""
-capitalized_list = []
+print("\nMy original sentence")
+print(my_original_string)
 
-for word in list_from_split:
-    reconstructed_string += word[0].capitalize() + word[1:] + ","
-    capitalized_list.append(word[0].capitalize() + word[1:])
+my_string_list = my_original_string.split(" ")
 
-print("\nOur string with capitalized first letters of each word")
-print(reconstructed_string)
-print(str.join(",", capitalized_list))
+my_capitalized_words_list = []
+
+for string in my_string_list:
+    my_capitalized_words_list.append(string[0].capitalize() + string[1:])
+
+my_capitalized_sentence = str.join(" ", my_capitalized_words_list)
+
+print("\nMy capitalized sentence")
+print(my_capitalized_sentence)

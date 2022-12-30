@@ -1,17 +1,16 @@
 import json
 
-json_file = open("random_names.json")
 
-json_test_string = json_file.read()
+json_file = open("randomNames.json", "r")
 
-json_result = json.loads(json_test_string)
+json_string = json_file.read()
+output_list = json.loads(json_string)
 
+csv_output_string = "First Name,Last Name\n"
 
-file_result = "first_name,last_name\n"
+for name in output_list:
+    csv_output_string += name["first_name"] + "," + name["last_name"] + "\n"
 
-for name in json_result:
-    # print(name)
-    file_result += name["first_name"] + "," + name["last_name"] + "\n"
+csv_file = open("jsonCSV.csv", "w")
 
-json_write = open("random_names_spreadsheet.csv", "w")
-json_write.write(file_result)
+csv_file.write(csv_output_string)

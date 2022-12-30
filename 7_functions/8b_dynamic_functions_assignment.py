@@ -1,5 +1,5 @@
 
-def capitalize_words_create(callback):
+def capitalize_words_create():
     def capitalize_words(show_result, /, *, string_to_check):
         string_parts = str(string_to_check).split(" ")
         result_string = ""
@@ -7,13 +7,8 @@ def capitalize_words_create(callback):
             result_string += word[0].upper() + word[1:].lower() + " "
         if show_result:
             print(result_string.strip())
-        callback(result_string.strip())
+        return result_string.strip()
     return capitalize_words
 
 
-@capitalize_words_create
-def show_result(result):
-    print("Here is the result: " + result)
-
-
-show_result(True, string_to_check="some random string")
+print(capitalize_words_create(True, string_to_check="some random string")())

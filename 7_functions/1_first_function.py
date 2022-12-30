@@ -1,6 +1,7 @@
 
-def my_first_func():
-    print("function ran")
+def hello_world():
+    print("Hello World")
 
-
-my_first_func()
+hello_world()
+hello_world()
+hello_world()

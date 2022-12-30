@@ -1,21 +1,14 @@
 
-def add_numbers(first_num, second_num):
-    return first_num + second_num
+def print_arguments(arg_to_print, should_print=True):
+    if (should_print):
+        print(arg_to_print)
+    return len(str(arg_to_print).split(" "))
 
 
-number_sum = add_numbers(5, 6)
+count_words = print_arguments("Some message", False)
 
-print("The value returned by add_numbers")
-print(number_sum)
+print("This is the returned value from print_arguments")
+print(count_words)
+print("\n")
 
-def add_number_list(number_list):
-    return_num = 0
-    for number in number_list:
-        return_num += number
-    return return_num
-
-
-number_sum = add_number_list([5, 6, 7, 8])
-
-print("\nThe value returned by add_number_list")
-print(number_sum)
+print(print_arguments("Some other message"))

@@ -1,38 +1,34 @@
 
-def partially_edited_function(show_message, /, **kwargs):
-    print(kwargs)
-    if (show_message):
-        print(kwargs["message"])
-    if ("alt_message" in kwargs):
-        print(kwargs["alt_message"])
-    else:
-        print("Some default message")
+def dynamic_param_func(show_message, message):
+    if show_message:
+        print(message)
+    print("\n")
+
+dynamic_param_func(message="some message", show_message=True)
+dynamic_param_func(show_message=True, message="some message")
+dynamic_param_func(True, "some message")
 
 
-print("\nCalling partially_edited_function with show_message = True")
-partially_edited_function(True, message="something")
+def positional_func(show_message, /, message):
+    if show_message:
+        print(message)
+    print("\n")
 
-print("\nCalling partially_edited_function with show_message = False")
-partially_edited_function(False, message="something")
-
-print("\nCalling partially_edited_function with an alt_message and show_message = False")
-partially_edited_function(False, message="something",
-                          alt_message="An additional keyword was added")
-
-
-def maybe_display_sum(display_sum, /, *args):
-    result_sum = 0
-    for number in args:
-        result_sum += number
-    if (display_sum):
-        print(result_sum)
-    return result_sum
+# TypeError: positional_func() got some positional-only arguments passed as keyword arguments: 'show_message'
+# positional_func(message="some message", show_message=True) 
+# positional_func(show_message=True, message="some message")
+positional_func(True, "some message")
+positional_func(True, message="some message")
 
 
-print("\nCalling maybe_display_sum with display_sum = True")
-returned_sum = maybe_display_sum(True, 3, 4, 5, 6, 7)
-print(returned_sum)
+def positional_and_keywork_func(show_message, /, message, *, new_message):
+    if show_message:
+        print(message)
+        print(new_message)
+    print("\n")
 
-print("\nCalling maybe_display_sum with display_sum = False")
-returned_sum = maybe_display_sum(False, 3, 4)
-print(returned_sum)
+# TypeError: positional_and_keywork_func() takes 2 positional arguments but 3 were given
+# positional_and_keywork_func(True, "some message", "new message")
+positional_and_keywork_func(True, "some message", new_message="new message")
+positional_and_keywork_func(True, message="some message", new_message="new message")
+

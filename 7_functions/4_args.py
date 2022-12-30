@@ -1,25 +1,11 @@
 
-def add_number_list(number_list):
-    return_num = 0
-    for number in number_list:
-        return_num += number
-    return return_num
-
-
-number_sum = add_number_list([5, 6, 7, 8])
-
-print("\nThe value returned by add_number_list")
-print(number_sum)
-
-
-def add_number_args(*args):
-    return_num = 0
+def add_number_list(*args):
+    result_sum = 0
     for number in args:
-        return_num += number
-    return return_num
+        result_sum += number
+    return result_sum
 
 
-number_sum = add_number_args(5, 6, 7, 8, 9, 10)
+# list_of_numbers = [3, 4, 5, 1, 2, 3]
 
-print("\nThe value returned by add_number_args")
-print(number_sum)
+print(add_number_list(3, 4, 5, 1, 2, 3))

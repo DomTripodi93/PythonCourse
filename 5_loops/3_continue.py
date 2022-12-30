@@ -1,24 +1,25 @@
+
 menu_items = [
-    "large:fry",
-    "small:fry",
-    "single:burger",
-    "double:burger",
-    "chicken sandwich",
-    "small:nuggets",
-    "large:nuggets"
+    "cheeseburger:4",
+    "fries:3",
+    "nuggets:5",
+    "chicken sandwich-5",
+    "milk shake:2",
+    "soda:1"
 ]
 
-menu_dict_list = []
+menu_item_dictionaries = []
 
 for item in menu_items:
-    if ":" not in item:
+    # print(item)
+    if not ":" in item:
         continue
     item_parts = item.split(":")
-    print(item_parts)
-    menu_dict_list.append({
-        "size": item_parts[0],
-        "item": item_parts[1]
-    })
+    output_item = {
+        "item_name": item_parts[0],
+        "item_price": item_parts[1]
+    }
+    menu_item_dictionaries.append(output_item)
 
-print("\nResulting menu dictionary: menu_dict_list")
-print(menu_dict_list)
+print("Loop finished")
+print(menu_item_dictionaries)

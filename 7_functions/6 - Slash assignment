@@ -1,8 +1,11 @@
 Hello!
 
-In the next lecture we will be talking about the "/" argument in a function.
+In the next lecture we will be talking about the "/" and "*" arguments in a function.
 
-Your assignment is to update the capitalize_words function to take a number or words to capitalize as the frist argument and a named keyword argument from the **kwargs argument.
+Your assignment is in 3 parts:
+1. Update the capitalize_words function to take a show_result positional only argument.
+2. Print the result to the console when capitalize_words is True.
+3. Convert the string_to_check argument to a keyword only argument.
 
 
 See you in the next lecture!

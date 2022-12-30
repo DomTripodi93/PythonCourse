@@ -2,6 +2,4 @@
 # file = open("new.txt", "w")
 file = open("new.txt", "a")
 
-# file.write("Some random text")
-file.write("\nAnother line of text")
-
+file.write("\nSome new line of text - new number 2")

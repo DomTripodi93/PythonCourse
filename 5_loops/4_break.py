@@ -1,30 +1,30 @@
+
 menu_items = [
-    "large:fry:7",
-    "small:fry:5",
-    "single:burger:5",
-    "double:burger:6",
-    "small:nuggets:4",
-    "large:nuggets:6"
+    "cheeseburger:4",
+    "fries:4",
+    "nuggets:4",
+    "chicken sandwich-4",
+    "milk shake:4",
+    "soda:4"
 ]
 
-menu_dict_list = []
-total = 0
+cart_dictionaries = []
+cart_total = 0
 
 for item in menu_items:
+    print(item)
+    if not ":" in item:
+        continue
     item_parts = item.split(":")
-    dict_to_add = {
-        "size": item_parts[0],
-        "item": item_parts[1],
-        "price": item_parts[2]
+    output_item = {
+        "item_name": item_parts[0],
+        "item_price": int(item_parts[1])
     }
-    # total += int(dict_to_add["price"])
-    if (total_cost := total + int(dict_to_add["price"])) > 20:
+    if cart_total + output_item["item_price"] < 10:
+        cart_total += output_item["item_price"]
+        cart_dictionaries.append(output_item)
+    else:
         break
-    total = total_cost
-    menu_dict_list.append(dict_to_add)
 
-print("\nResulting menu dictionary: menu_dict_list")
-print(menu_dict_list)
-
-print("\nTotal cost of items: total")
-print(total)
+print("Loop finished")
+print(cart_dictionaries)

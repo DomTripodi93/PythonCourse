@@ -1,16 +1,8 @@
-from generic_class import GenericClass
-from capitalize_words import capitalize_words
+from my_first_class import MyFirstClass
 
-generic_instance = GenericClass()
+my_first_class_instance = MyFirstClass(numeric_attribute=5)
 
-generic_instance.random_sentence = "Some random stuff with normal capilization"
+print("\nThe result of compare_to_attribute for 7 on " +
+      "my_second_class_instance: my_second_class_instance.compare_to_attribute(7)")
+print(my_first_class_instance.compare_to_attribute(7))
 
-generic_instance.capitalized_words_sentence = capitalize_words(
-    generic_instance.random_sentence)
-
-print("The original generic_instance.random_sentence")
-print(generic_instance.random_sentence)
-
-print("\nThe capitalized version generic_instance.capitalized_words_sentence: " +
-      "capitalize_words(generic_instance.random_sentence)")
-print(generic_instance.capitalized_words_sentence)

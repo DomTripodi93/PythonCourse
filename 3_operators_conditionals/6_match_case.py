@@ -1,17 +1,17 @@
-# some_int = 2
-# some_int = 7
-# some_int = 5
-# some_int = False
-some_int = "words"
+import datetime
 
-match some_int:
-    case 2:
-        print("value is 2")
-    case 7:
-        print("value is 7")
+# my_generic_variable = datetime.datetime(2023, 6, 15).strftime("%Y/%m/%d")
+my_generic_variable = "random string"
+
+match my_generic_variable:
+    case 5:
+        print("The value is 5")
+    case "random string":
+        print("The value is \"random string\"")
     case False:
-        print("value is False")
-    case "words":
-        print("value is words")
+        print("The value is False")
+    # case datetime.datetime(2023, 6, 15):
+    case "2023/06/15":
+        print("The value is June 15 2023")
     case other:
-        print("not an expected match")
+        print("Our variable had no match")

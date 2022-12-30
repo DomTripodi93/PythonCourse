@@ -1,16 +1,29 @@
 import json
 
-json_test_string = "{\"someKey\": \"Some Value\"}"
+json_string = "{\"someKey\": \"some value\"}"
 
-json_result = json.loads(json_test_string)
+# NoneType
+# noneType
+print("Our original JSON string")
+print(json_string)
 
-print("Dictionary created by parsing JSON: json.loads(json_test_string)")
-print(json_result)
 
-print("\nValue accessed by a key in the dictionary created by parsing JSON: json_result[\"someKey\"]")
-print(json_result["someKey"])
+output_dictionary = json.loads(json_string)
 
-json_reverted = json.dumps(json_result)
+print("\nOur converted dictionary from our JSON string")
+print(output_dictionary)
 
-print("\nMy dictionary converted to a JSON string: json.dumps(json_result)")
-print(json_reverted)
+
+print("\nThe someKey value in our dictionary")
+print(output_dictionary["someKey"])
+
+
+json_string_output = json.dumps(output_dictionary)
+
+
+print("\nOur converted JSON string from our dictionary")
+print(json_string_output)
+
+file = open("jsonOutput.json", "w")
+
+file.write(json_string_output)

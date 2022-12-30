@@ -1,11 +1,6 @@
-some_int = 2
 
-# if test := 5 == 5:
-if (test := 5) == 5:
-    some_int = test
-    print("The statement was true")
-    print("\nThis line will only run when true")
+# if my_int_to_check := 5 == 4: #Set the value to False because it is the return from 5 == 4
+if (my_int_to_check := 5) == 5: #Set the value to 5 because it is the return from 5
+    print("The if check was true")
 
-print("\nThis line will run either way")
-print(some_int)
-print(test)
+print(my_int_to_check)

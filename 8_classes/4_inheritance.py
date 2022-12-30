@@ -1,40 +1,34 @@
 
-class MyConstructableClass:
-    def __init__(self, numeric_attribute, string_attribute):
-        self.numeric_attribute = numeric_attribute
-        self.string_attribute = string_attribute
+class MyFirstClass:
+    def __init__(self, **kwargs):
+        self.numeric_attribute = kwargs["numeric_attribute"]
 
-    def compare_to_numeric(self, value_to_compare):
-        try:
-            if value_to_compare > self.numeric_attribute:
-                return "Greater Than"
-            elif value_to_compare < self.numeric_attribute:
-                return "Less Than"
-            else:
-                return "Equal To"
-        except:
-            return "Values are not comparable"
-
-class MyInheritedClass(MyConstructableClass):
-    # test_attribute = 7
-    def __init__(self, numeric_attribute, string_attribute, test_attribute):
-        self.numeric_attribute = numeric_attribute
-        self.string_attribute = string_attribute
-        self.test_attribute = test_attribute
+    def compare_to_attribute(self, value_to_compare):
+        if value_to_compare > self.numeric_attribute:
+            return "Greater than"
+        elif value_to_compare < self.numeric_attribute:
+            return "Less than"
+        else:
+            return "Equal"
 
 
-# my_class_instance = MyInheritedClass(6, "words")
-my_class_instance = MyInheritedClass(6, "words", "new test value")
+class MyInheritingClass(MyFirstClass):
+    def compare_to_attribute(self, value_to_compare):
+        if value_to_compare > self.numeric_attribute:
+            return ">"
+        elif value_to_compare < self.numeric_attribute:
+            return "<"
+        else:
+            return "="
 
-print("\nA view of numeric_attribute, string_attribute and test_attribute on my_class_instance " +
-      "instance of MyInheritedClass")
-print(my_class_instance.numeric_attribute)
-print(my_class_instance.string_attribute)
-print(my_class_instance.test_attribute)
 
+my_first_class_instance = MyFirstClass(numeric_attribute=5)
+my_second_class_instance = MyInheritingClass(numeric_attribute=5)
 
-print("\nThe result of my_class_instance.compare_to_numeric(17)")
-print(my_class_instance.compare_to_numeric(17))
+print("The result of compare_to_attribute for 7 on " +
+      "my_first_class_instance: my_first_class_instance.compare_to_attribute(7)")
+print(my_first_class_instance.compare_to_attribute(7))
 
-print("\nThe result of my_class_instance.compare_to_numeric([])")
-print(my_class_instance.compare_to_numeric([]))
+print("\nThe result of compare_to_attribute for 7 on " +
+      "my_second_class_instance: my_second_class_instance.compare_to_attribute(7)")
+print(my_second_class_instance.compare_to_attribute(7))

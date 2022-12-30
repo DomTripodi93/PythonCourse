@@ -1,14 +1,12 @@
-some_int = 2
+
+my_int_to_check = 1
 
 # if 5 == 4:
-if 5 == 5:
-    some_int = 5
-    print("The statement was true")
-    print("\nThis line will only run when true")
-elif some_int == 2:
-    print("The some_int variable has a value of 2")
+if my_int_to_check > 7:
+    print("value is greater than 7")
+elif my_int_to_check > 4:
+    print("value is less than or equal to 7 and greater than 4")
+elif my_int_to_check > 2:
+    print("value is less than or equal to 4 and greater than 2")
 else:
-    print("None of the previous statements are true")
-
-print("\nThis line will run either way")
-print(some_int)
+    print("value is less than or equal to 2")

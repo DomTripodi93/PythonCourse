@@ -1,35 +1,36 @@
 
-def add_number_args(*args):
-    return_num = 0
-    for number in args:
-        return_num += number
-    return return_num
+# def add_number_list(*args):
+#     result_sum = 0
+#     for number in args:
+#         result_sum += number
+#     return result_sum
 
 
-number_sum = add_number_args(5, 6, 7, 8, 9, 10)
+# # list_of_numbers = [3, 4, 5, 1, 2, 3]
 
-print("\nThe value returned by add_number_args")
-print(number_sum)
-
+# print(add_number_list(3, 4, 5, 1, 2, 3))
 
 def commonly_edited_function(**kwargs):
-    print(kwargs)
-    # print(kwargs["test"])
-    # if (kwargs["show_test"]):
-    if ("show_message" in kwargs and kwargs["show_message"]):
+    if "show_message" in kwargs.keys() and kwargs["show_message"]:
         print(kwargs["message"])
+    elif not "show_message" in kwargs.keys():
+        print("No show_message key")
     else:
-        print("Some default message")
+        print("show_message is False")
+
+        
+    if "new_message" in kwargs.keys() and kwargs["show_new_message"]:
+        print("new message")
+        print(kwargs["new_message"])
+    elif not "show_new_message" in kwargs.keys():
+        print("No show_new_message key")
+    else:
+        print("show_new_message is False")
+    
+    print("\n")
 
 
-# print("\nCalling commonly_edited_function: commonly_edited_function(test=\"something\")")
-# commonly_edited_function(test="something")
-
-print("\nCalling commonly_edited_function with show_message = True")
-commonly_edited_function(message="something", show_message=True)
-
-print("\nCalling commonly_edited_function with show_message = False")
-commonly_edited_function(message="something", show_message=False)
-
-print("\nCalling commonly_edited_function without show_message")
-commonly_edited_function(message="something")
+commonly_edited_function(show_message=True, message="Some message")
+commonly_edited_function(show_message=False, message="Some message")
+commonly_edited_function(message="Some message")
+commonly_edited_function(show_new_message=True, new_message="Some new message")

@@ -1,13 +1,9 @@
 
-def my_first_func(my_first_arg):
-    print(my_first_arg)
+def print_arguments(arg_to_print, should_print=True):
+    if (should_print):
+        print(arg_to_print)
 
 
-my_first_func("some value")
-
-
-def add_numbers(first_num, second_num):
-    print(first_num + second_num)
-
-
-add_numbers(5, 6)
+print_arguments("Some message", True)
+print_arguments("Some other message")
+print_arguments("", False)

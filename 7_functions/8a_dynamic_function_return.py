@@ -10,15 +10,8 @@ def callback_func():
     print("this is the callback")
 
 
-# dynamic_nested_callback_func(callback_func)()
+dynamic_nested_callback_func(callback_func)()
 
 # nested_func_result = dynamic_nested_callback_func(callback_func)
 
 # nested_func_result()
-
-@dynamic_nested_callback_func
-def decorated_callback_func():
-    print("this is the decorated callback")
-
-
-decorated_callback_func()

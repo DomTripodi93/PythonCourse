@@ -1,20 +1,22 @@
 import json
 
-json_file = open("dynamic_json.json")
 
-json_test_string = json_file.read()
+json_file = open("dynamicJSON.json", "r")
 
-json_result = json.loads(json_test_string)
+json_string = json_file.read()
+output_list = json.loads(json_string)
 
-headers = json_result[0].keys()
+headers = dict(output_list[0]).keys()
 
-file_result = str.join(",", headers) + "\n"
+csv_output_string = str.join(",", headers) + "\n"
 
-for row in json_result:
+for row in output_list:
+    output_row = ""
     for header in headers:
-        # file_result += str(row[header]) + ","
-        file_result += "\"" + str(row[header]) + "\","
-    file_result += "\n"
+        # output_row += str(row[header]) + ","
+        output_row += "\"" + str(row[header]) + "\","
+    csv_output_string += output_row + "\n"
 
-json_write = open("dynamic_result.csv", "w")
-json_write.write(file_result)
+csv_file = open("dynamicCSVOutput.csv", "w")
+
+csv_file.write(csv_output_string)
