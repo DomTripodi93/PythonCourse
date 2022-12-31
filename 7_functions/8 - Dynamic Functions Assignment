@@ -2,8 +2,8 @@ Hello!
 
 In the next lectures we will be talking about the dynamic funcitons.
 
-Your assignment is to create a capitalize_words_create function that returns the capitalize_words function as a result.
-
+Your assignment is to define a function named "capitalize_words_create" that returns the "capitalize_words" function as a result.
 
 See you in the next lecture!
+
 Dominic

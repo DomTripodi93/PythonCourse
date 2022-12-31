@@ -1,9 +1,9 @@
 Hello!
 
-In the next lecture we will be talking about what a class is and creating out first class as an abstract idea.
+In the next lecture we will be talking about what a class is and creating our first class as an abstract idea.
 
 Your assignment is to implement a "Furniture" class that has a price attribute and use what we learn to create an instance of the "Furniture" class with a different price than the default.
 
-
 See you in the next lecture!
+
 Dominic
