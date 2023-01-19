@@ -10,5 +10,6 @@ def capitalize_words_create():
         return result_string.strip()
     return capitalize_words
 
+capitalize_words = capitalize_words_create()
 
-print(capitalize_words_create(True, string_to_check="some random string")())
+capitalize_words(True, string_to_check="some random string")

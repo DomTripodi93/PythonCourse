@@ -9,4 +9,4 @@ def capitalize_words(show_result, /, *, string_to_check):
     return result_string.strip()
 
 
-print(capitalize_words(True, string_to_check="some random string"))
+capitalize_words(True, string_to_check="some random string")
